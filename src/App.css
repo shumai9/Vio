@@ -1,10 +1,22 @@
 .App {
   text-align: center;
+  font-family: 'Playfair Display', serif;
 }
-
+nav h1 {
+  font-size: 3rem;
+  font-style: bold italic;
+}
+nav{
+  position: absolute;
+  top: 10px;
+  height: 80vh;
+  width: 80vw;
+  background: rgba(99, 12, 107, 0.66);
+}
 .App-header {
   position: absolute;
   width:100%;
+  height: 100vh;
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
@@ -14,7 +26,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+main::before {
+  content: '';
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  right: 2vh;
+  bottom: 2vh;
+  align-items: center;
+  background: rgb(184, 133, 133);
+  border-radius: 1rem;
+  z-index: -1;
+}
 main {
   position: absolute;
   top: 20vh;
@@ -22,6 +47,32 @@ main {
   right: 10vh;
   bottom: 20vh;
   align-items: center;
-  background: #ccc;
-  border-radius: 10%; 
+  background:  rgb(216, 204, 204);
+  border-radius: 1rem;
+  z-index: 15;
+  min-width: 20rem; 
+}
+.result{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: max-content;
+  padding: 1rem;
+  background: #a5c3ff;
+  width: auto;
+  position: absolute;
+  top: auto;
+  left: 1rem;
+  right: 1rem;
+  border: 3px solid #886464;
+  border-radius: 1.4rem;
+  box-shadow: inset 2px -3px 56px 0px rgba(0,0,0,0.69);
+  overflow: hidden;
+}
+#status,
+#speech,
+#answer{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0px 5px;
 }

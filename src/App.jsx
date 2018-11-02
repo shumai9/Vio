@@ -69,17 +69,16 @@ class App extends Component {
           <h1>Welcome...</h1>
           <h2>Room number? Please</h2>
           <div className="result">
-            <p id="status">Status: { this.state.status} </p>
-            <p id="speech"> Just a Second! Looking for: { this.state.result} </p>
-            <ul id="answer">Your booking:{
-              book.data.map((list) =>{
-                return ( 
-                  <li id={list.id}
-                      key= {list.room}>
-                    {list.name} - {list.room}
-                </li>);
-              })
-            } </ul>           
+            <p id="status"><strong> Status: </strong> { this.state.status} </p>
+            <p id="speech"> <strong>Checking booking :</strong> { this.state.result}  </p>           
+            <ul id="answer"><strong>Booking details:</strong>{ book.data.map((list) => {
+                  return ( 
+                    <li id={list.id} key= {list.room}>
+                      {list.name} - {list.room}
+                  </li>);
+                })
+              }
+             </ul>           
           </div>
         </main>
       </div>
